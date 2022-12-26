@@ -99,5 +99,9 @@ class Posthog {
     return _posthog.setContext(context);
   }
 
+  Future<bool?> isFeatureEnabled(String key) {
+    return _posthog.isFeatureEnabled(key);
+  }
+
   Posthog._internal();
 }

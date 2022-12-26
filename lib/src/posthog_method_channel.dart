@@ -114,4 +114,15 @@ class PosthogMethodChannel extends PosthogPlatform {
       print(exception);
     }
   }
+
+  Future<bool?> isFeatureEnabled(String key) async {
+    try {
+      return await _channel.invokeMethod('isFeatureEnabled', {
+        'key': key,
+      });
+    } on PlatformException catch (exception) {
+      print(exception);
+      return null;
+    }
+  }
 }

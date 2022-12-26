@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:7.2.1'
     }
 }
 
@@ -22,10 +22,10 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 33
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     lintOptions {
@@ -33,6 +33,6 @@ android {
     }
 
     dependencies {
-        implementation 'com.posthog.android:posthog:1.1.1'
+        implementation 'com.posthog.android:posthog:2.0.0'
     }
 }
